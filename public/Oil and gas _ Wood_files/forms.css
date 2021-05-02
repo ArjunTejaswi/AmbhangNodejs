@@ -1,0 +1,19 @@
+/* Layout */
+.sq-form-question{
+    margin-bottom: 10px;
+}
+/* Validation */
+.sq-form-errors-message,
+.sq-form-error{
+    color: red;
+}
+.sq-form-question-answer li {
+    list-style: none;
+}
+input[type="checkbox"] { 
+    -webkit-appearance: checkbox !important; 
+    float: left !important; 
+    width: auto !important; 
+    margin: 7px 0 0 -40px !important; 
+    height: auto !important;
+}

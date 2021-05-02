@@ -1,0 +1,40 @@
+@media(max-width: 1199px) {
+    .our-services .card-body p {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .right-testimonial .owl-dots {
+        left: -245px;
+        bottom: 50px;
+    }
+    .testimonial-inner::before {
+        content: '';
+        bottom: 108px;
+    }
+    .testimonial-section1 h2 {
+        font-size: 38px;
+        line-height: 48px;
+    }
+    .footer-sec2 {
+        margin-top: 0;
+    }
+    #service-slider button.owl-next span:before, #service-slider button.owl-prev span:before{
+        display: none;
+    }
+}
+@media(max-width: 992px) {
+    .nav-items .nav-item-list li {
+        padding: 0 15px;
+        font-size: 13px !important;
+        line-height: 24px !important;
+    }
+    #service-slider .col-md-3{
+        position: relative;
+        width: 100%;
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+    .our-services .card-body p {
+        margin-bottom: 10px;
+    }
+}
