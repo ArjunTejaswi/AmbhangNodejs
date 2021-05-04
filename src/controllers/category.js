@@ -8,8 +8,8 @@ const mark = require('markup-js')
 const fs = require('fs')
 const awsKeys =  {
     region: 'ap-south-1',
-        accessKeyId: 'AKIAUTHKIFGHCQSTCG5F',
-        secretAccessKey: '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'
+        accessKeyId: 'AKIAUTHKIFGHMO47GJ6U',
+        secretAccessKey: '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'
 }
 const SES = new AWS.SES(awsKeys)
 
@@ -98,7 +98,7 @@ router.post('/Contact-Us', (req,res,next) => {
                         Charset: 'UTF-8'
                     }
                 },
-                Source: 'arjuntejaswi.s@gmail.com',
+                Source:'arjuntejaswi.s@gmail.com' ,
                 ReplyToAddresses: [
                     'arjuntejaswi.s@gmail.com'
                 ]
@@ -115,6 +115,7 @@ router.post('/Contact-Us', (req,res,next) => {
                     console.log(err)
                 } else {
                     console.log("Hi")
+                    res.redirect('/Home')
                 }
             })
         }

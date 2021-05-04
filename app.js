@@ -15,7 +15,7 @@ app.use(bodyParser.json())
 // app.use(expressLayouts)
 app.use(express.static('public'));
 
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'src/views'));
 
 app.set('view engine', 'ejs');
 
