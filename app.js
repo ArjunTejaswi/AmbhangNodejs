@@ -2,10 +2,10 @@ const express = require('express')
 const app = express() //for executing express as a fn
 const expressLayouts = require('express-ejs-layouts')
 const path = require('path')
-const categoryRoutes = require('./api/controllers/category')
-// const authorRoutes = require('./api/controllers/author')
-// const postRoutes = require('./api/controllers/post')
-// const userRoutes = require('./api/controllers/user')
+const categoryRoutes = require('./src/controllers/category')
+// const authorRoutes = require('./src/controllers/author')
+// const postRoutes = require('./src/controllers/post')
+// const userRoutes = require('./src/controllers/user')
 const morgan = require('morgan')
 const bodyParser =  require('body-parser')
 
@@ -14,7 +14,6 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 // app.use(expressLayouts)
 app.use(express.static('public'));
-app.engine('html', require('ejs').renderFile);
 
 app.set('views', path.join(__dirname, 'views'));
 
