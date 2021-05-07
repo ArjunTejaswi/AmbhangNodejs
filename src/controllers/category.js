@@ -38,6 +38,12 @@ router.get('/Contact-Us', (req,res,next) => {
     })
 })
 
+router.get('/Gallery', (req,res,next) => {
+    res.render('Gallery',{
+        layout: 'layouts/layout',
+    })
+})
+
 // router.post('/Contact-Us', (req,res,next) => {
 //     console.log(req.body)
 //     var transporter = nodemailer.createTransport({

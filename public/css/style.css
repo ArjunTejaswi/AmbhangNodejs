@@ -315,7 +315,7 @@ ul.sub-sec, .gallery ul {
     border-bottom: 1px solid rgba(0,0,0,0.10);
 }
 .sub-sec li:hover, .gallery li:hover{
-    background-color: #00beef;
+    background-color: #28a645;
 }
 .sub-sec li:hover > ul.sub-sec{
     top: 0;
@@ -461,8 +461,9 @@ ul.social-icons li:last-child{
     margin-right: 0;
 }
 ul.social-icons {
-    display: inline-flex;
+    display: flex;
     padding: 0;
+    justify-content: center;
 }
 .social-icons img {
     background-color: #005179;
@@ -475,7 +476,7 @@ ul.social-icons {
     font-size: 20px;
     line-height: 28px;
     color: #ffffff;
-    text-align: left;
+    text-align: center;
     border-bottom: 1px solid;
     padding-bottom: 10px;
     margin-bottom: 20px;
@@ -801,16 +802,18 @@ section#people-saying {
 }
 .copyright-menu ul li {
     list-style: none;
-    margin-right: 30px;
-    padding-right: 30px;
+    margin-right: 25px;
+    padding-right: 25px;
     border-right: 1px solid #ffffff;
     display: inline-block;
     line-height: 12px;
     color: #ffffff;
     font-family: 'Spartan-Regular';
 }
-.copyright-menu ul li:last-child{
+.copyright-menu ul li:last-child {
     border: none;
+    margin-right: 0;
+    padding-right: 0;
 }
 .footer-sec2 {
     text-align: center;
@@ -833,8 +836,9 @@ p.copyright {
     color: #004a6a;
     font-size: 14px;
     line-height: 22px;
-    text-align: left;
+    text-align: center;
     font-family: 'Spartan-Medium';
+    text-transform: uppercase;
 }
 li.course a:hover {
     color: #3fb9df;
@@ -1032,4 +1036,110 @@ section.jumbotron.about-us-sec {
 }
 .home-banner a {
     text-decoration: none!important;
+}
+ul.first-footer-content.footer-second {
+    margin-top: 15px;
+}
+.gallery-sec img {
+    width: 100%;
+}
+section.gallery-sec {
+    margin: 50px 0;
+}
+.big-img{
+    width: 100% !important;
+    max-width: 50% !important;
+    height: 80%;
+    top: 50%;
+    position: absolute;
+    transform: translate(50%, 0px);
+    display: none;
+}
+
+.big-img span.closebtn {
+    position: absolute;
+    right: 25px;
+    top: 10px;
+    font-size: 35px;
+    line-height: 35px;
+    color: #333333;
+    width: 30px;
+    text-align: center;
+}
+.big-img span.closebtn:hover{
+    background: #b5b1b185;
+    border-radius: 50%;
+}
+.gallery-sec .card{
+    margin-bottom: 20px;
+}
+.gallery-sec ul.pages {
+    margin-top: 30px;
+    text-align: center;
+}
+.gallery-sec ul.pages li {
+    display: inline-block;
+    margin: 0px 2px;
+}
+.gallery-sec ul.pages li a {
+    width: 44px;
+    height: 44px;
+    display: inline-block;
+    line-height: 42px;
+    border: 1px solid #eee;
+    font-size: 15px;
+    font-weight: 700;
+    color: #121212;
+    transition: all .3s;
+    text-decoration: none;
+}
+.gallery-sec ul.pages li a:hover, .gallery-sec ul.pages li.active a {
+    background-color: #004566;
+    border-color: #004566;
+    color: #fff;
+}
+.card-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    font-family: Spartan-Regular;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+.card-content > *{
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+.card-content:hover{
+    opacity: 1;
+}
+.card-content:hover > *{
+    transform: translateY(0);
+}
+.card-content--blur{
+    backdrop-filter: blur(5px);
+}
+.card-content h3{
+    font-size: 24px;
+    line-height: 30px;
+    font-family: Spartan-Bold;
+}
+.card-content p{
+    font-size: 18px;
+    line-height: 24px;
+    font-family: Spartan-Light;
+}
+.gallery-sec {
+    padding: 50px 0;
+}
+a.btn.btn-outline-success.btn-sm {
+    border-color: #28a745;
 }
