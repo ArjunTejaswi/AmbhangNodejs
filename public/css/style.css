@@ -98,10 +98,10 @@ blurb h2 {
     text-align: center;
 }
 .Display{
-    font-size: 5rem;
+    font-size: 8rem!important;
     font-weight: 300;
     line-height: 1.2;
-    font-family: 'Spartan-Bold';
+    font-family: 'Spartan-Regular';
     color: #5c5e5f;
 }
 .subtitle{
@@ -315,7 +315,7 @@ ul.sub-sec, .gallery ul {
     border-bottom: 1px solid rgba(0,0,0,0.10);
 }
 .sub-sec li:hover, .gallery li:hover{
-    background-color: #28a645;
+    background-color: #88c965;
 }
 .sub-sec li:hover > ul.sub-sec{
     top: 0;
@@ -841,7 +841,7 @@ p.copyright {
     text-transform: uppercase;
 }
 li.course a:hover {
-    color: #3fb9df;
+    color: #7cc350;
 }
 .first-footer-content.footer-second li{
     margin-bottom: 30px;

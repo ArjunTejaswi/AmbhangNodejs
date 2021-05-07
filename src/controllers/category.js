@@ -105,9 +105,9 @@ router.post('/Contact-Us', (req,res,next) => {
                     }
                 },
                 Source:'arjuntejaswi.s@gmail.com' ,
-                ReplyToAddresses: [
-                    'arjuntejaswi.s@gmail.com'
-                ]
+                // ReplyToAddresses: [
+                //     'arjuntejaswi.s@gmail.com'
+                // ]
             }
             emailParams.Message.Body = {
                 Html: {
@@ -120,7 +120,6 @@ router.post('/Contact-Us', (req,res,next) => {
                 if (err) {
                     console.log(err)
                 } else {
-                    console.log("Hi")
                     res.redirect('/Home')
                 }
             })
@@ -128,4 +127,15 @@ router.post('/Contact-Us', (req,res,next) => {
     })
 })
 
+router.get('/PrivacyPolicy', (req,res,next) => {
+    res.render('privacyPolicy',{
+        layout: 'layouts/layout',
+    })
+})
+
+router.get('/Terms', (req,res,next) => {
+    res.render('Terms',{
+        layout: 'layouts/layout',
+    })
+})
 module.exports = router
