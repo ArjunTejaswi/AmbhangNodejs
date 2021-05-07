@@ -8,8 +8,8 @@ const mark = require('markup-js')
 const fs = require('fs')
 const awsKeys =  {
     region: 'ap-south-1',
-        accessKeyId: 'AKIAUTHKIFGHMO47GJ6U',
-        secretAccessKey: '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'
+        accessKeyId: '',
+        secretAccessKey: ''
 }
 const SES = new AWS.SES(awsKeys)
 
