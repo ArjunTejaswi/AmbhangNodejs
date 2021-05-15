@@ -6,12 +6,14 @@ const AWS = require('aws-sdk')
 const path = require('path')
 const mark = require('markup-js')
 const fs = require('fs')
-const awsKeys =  {
-    region: 'ap-south-1',
-        accessKeyId: '',
-        secretAccessKey: ''
-}
-const SES = new AWS.SES(awsKeys)
+const ejs = require('ejs')
+const pdf = require('html-pdf')
+// const awsKeys =  {
+//     region: 'ap-south-1',
+//     accessKeyId: "AKIAUTHKIFGHFEZ4QQRO",
+//     secretAccessKey: "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"
+// }
+// const SES = new AWS.SES(awsKeys)
 
 
 router.get('/Home', (req,res,next) => {
@@ -32,6 +34,60 @@ router.get('/Downloads', (req,res,next) => {
     })
 })
 
+router.get('/profile', (req,res,next) => {
+    ejs.renderFile(path.join(__dirname, '../views', 'pdf/profile.ejs'), (err, data) => {
+        if (err) {
+            console.log(err)
+        } else {
+            var options = {
+                height: '11.25in',
+                width: '8.5in',
+                header: {
+                    height: '20mm'
+                },
+                footer: {
+                    height: '20mm'
+                }
+            }
+            pdf.create(data, options).toBuffer((err, buffer) => {
+                res.writeHead(200,
+                    {
+                        'Content-Type': 'application/pdf',
+                        'Content-Disposition': 'attachment;filename="Our-Profile.pdf"'
+                    })
+                res.end(buffer)
+            })
+        }
+    })
+})
+
+router.get('/activities', (req,res,next) => {
+    ejs.renderFile(path.join(__dirname, '../views', 'pdf/activities.ejs'), (err, data) => {
+        if (err) {
+            console.log(err)
+        } else {
+            var options = {
+                height: '11.25in',
+                width: '8.5in',
+                header: {
+                    height: '20mm'
+                },
+                footer: {
+                    height: '20mm'
+                }
+            }
+            pdf.create(data, options).toBuffer((err, buffer) => {
+                res.writeHead(200,
+                    {
+                        'Content-Type': 'application/pdf',
+                        'Content-Disposition': 'attachment;filename="activities.pdf"'
+                    })
+                res.end(buffer)
+            })
+        }
+    })
+})
+
 router.get('/Contact-Us', (req,res,next) => {
     res.render('Contact-Us',{
         layout: 'layouts/layout',
@@ -45,87 +101,59 @@ router.get('/Gallery', (req,res,next) => {
 })
 
 // router.post('/Contact-Us', (req,res,next) => {
-//     console.log(req.body)
-//     var transporter = nodemailer.createTransport({
-//         service: 'gmail',
-//         auth: {
-//             user: 'arjuntejaswi.s@gmail.com',
-//             pass: 'arjunvivek'
-//         }
-//     });
-//
-//     var mailOptions = {
-//         from: req.body.email_id,
-//         to: 'arjuntejaswi.s@gmail.com',
-//         subject: req.body.subject,
-//         text: req.body.message
-//     };
-//
-//     transporter.sendMail(mailOptions, function(error, info){
-//         if (error) {
-//             console.log(error);
+//     const subject = req.body.subject
+//     const message = req.body.message
+//     const name = req.body.first_name
+//     const email = req.body.email_id
+//     const messageBodyAttributes = {
+//         toEmailAddress: 'arjuntejaswi.s@gmail.com',
+//         // eslint-disable-next-line no-dupe-keys
+//         subject: subject,
+//         message: message,
+//         name: name,
+//         email: email,
+//     }
+//     fs.readFile(path.join(__dirname, '../views/template/contact.html'), 'utf8', function (err, data) {
+//         if (err) {
+//             console.log(err)
+//             // context.fail('Internal Error: Failed to load template from s3.');
 //         } else {
-//             console.log('Email sent: ' + info.response);
-//             res.redirect('/Home')
+//             const templateBody = data.toString()
+//             const messageBody = mark.up(templateBody, messageBodyAttributes)
+//             const emailParams = {
+//                 Destination: {
+//                     ToAddresses: [
+//                         'arjun.tejaswi@7edge.com'
+//                     ]
+//                 },
+//                 Message: {
+//                     Subject: {
+//                         Data: messageBodyAttributes.subject,
+//                         Charset: 'UTF-8'
+//                     }
+//                 },
+//                 Source:'arjuntejaswi.s@gmail.com' ,
+//                 // ReplyToAddresses: [
+//                 //     'arjuntejaswi.s@gmail.com'
+//                 // ]
+//             }
+//             emailParams.Message.Body = {
+//                 Html: {
+//                     Data: messageBody,
+//                     Charset: 'UTF-8'
+//                 }
+//             }
+//             // eslint-disable-next-line no-unused-vars
+//             SES.sendEmail(emailParams, function (err, data) {
+//                 if (err) {
+//                     console.log(err)
+//                 } else {
+//                     res.redirect('/Home')
+//                 }
+//             })
 //         }
-//     });
+//     })
 // })
-
-router.post('/Contact-Us', (req,res,next) => {
-    const subject = req.body.subject
-    const message = req.body.message
-    const name = req.body.name
-    const email = req.body.email_id
-    const messageBodyAttributes = {
-        toEmailAddress: 'arjuntejaswi.s@gmail.com',
-        subject: 'The Steel Room',
-        // eslint-disable-next-line no-dupe-keys
-        subject: subject,
-        message: message,
-        name: name,
-        email: email,
-    }
-    fs.readFile(path.join(__dirname, '../views/template/contact.html'), 'utf8', function (err, data) {
-        if (err) {
-            console.log(err)
-            // context.fail('Internal Error: Failed to load template from s3.');
-        } else {
-            const templateBody = data.toString()
-            const messageBody = mark.up(templateBody, messageBodyAttributes)
-            const emailParams = {
-                Destination: {
-                    ToAddresses: [
-                        'arjuntejaswi.s@gmail.com'
-                    ]
-                },
-                Message: {
-                    Subject: {
-                        Data: messageBodyAttributes.subject,
-                        Charset: 'UTF-8'
-                    }
-                },
-                Source:'arjuntejaswi.s@gmail.com' ,
-                // ReplyToAddresses: [
-                //     'arjuntejaswi.s@gmail.com'
-                // ]
-            }
-            emailParams.Message.Body = {
-                Html: {
-                    Data: messageBody,
-                    Charset: 'UTF-8'
-                }
-            }
-            // eslint-disable-next-line no-unused-vars
-            const email = SES.sendEmail(emailParams, function (err, data) {
-                if (err) {
-                    console.log(err)
-                } else {
-                    res.redirect('/Home')
-                }
-            })
-        }
-    })
-})
 
 router.get('/PrivacyPolicy', (req,res,next) => {
     res.render('privacyPolicy',{

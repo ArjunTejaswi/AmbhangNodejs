@@ -54,23 +54,17 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="footer-content">
-                    <div class="col-lg-3 col-md-4">
-                        <ul class="first-footer-content">
-                            <li>
-                                <h3>GET IN TOUCH</h3>
-                            </li>
-                            <li>
-                                <ul class="footer-second">
-                                    <li><span>Phone: </span> +1 123 457 653</li>
-                                    <li><span>Fax: </span> +1 496 457 654</li>
-                                    <li><span>Fax: </span> +1 496 457 654</li>
-                                    <li><span>Email: </span>abcd@gmail.com</li>
-                                    <li><span>Address: </span> 121 King Street, Melbourne 3000 Australia</li>
-                                </ul>
-                            </li>
+                    <div class="col-lg-6 col-md-6">
+                        <h6 class="our-services-head">OUR OTHER SERVICES</h6>
+                        <ul class="inner-list">
+                            <li><a href="#">Boiler serving & retubing</a></li>
+                            <li><a href="#">Vessel & Tanks cleaning</a></li>
+                            <li><a href="#">Marine oil & gas integrated services</a></li>
+                            <li><a href="#">Hydrojetting services(5KPSI - 40KPSI)</a></li>
+                            <li><a href="#">Chemical cleaning(Pickling and Passivation)</a></li>
                         </ul>
                     </div>
-                    <div class="col-lg-6 col-md-4">
+                    <div class="col-lg-6 col-md-6 ml-3">
                         <h6>FOLLOW US ON</h6>
                         <ul class="social-icons">
                             <li class="hvr-grow">
@@ -88,48 +82,14 @@
                         </ul>
                         <div class="copyright-menu">
                             <ul>
-                                <li>Home</li>
-                                <li>About Us</li>
-                                <li>Blog</li>
-                                <li>Contact</li>
+                                <li><a href="/Home">Home</a></li>
+                                <li><a href="/About-Us">About Us</a></li>
+                                <li><a href="/PrivacyPolicy">Privacy Policy</a></li>
+                                <li><a href="/Terms">Terms And Conditions</a></li>
                             </ul>
                         </div>
                         <p class="copyright">© 2021 Ambhang All rights reserved.</p>
                     </div>
-                    <div class="col-lg-3 col-md-4">
-                        <ul class="first-footer-content footer-second">
-                            <li><a href="/PrivacyPolicy">Privacy Policy</a></li>
-                            <li><a href="/Terms">Terms And Conditions</a></li>
-                            <li><a href="/About-Us">About-Us</a></li>
-                        </ul>
-                        <!-- <div class="col-md-12">
-                            <p class="copyright">© 2021 Ambhang All rights reserved.</p>
-                        </div> -->
-                    </div>
-                    <!-- <div class="col-md-5">
-                        <h6 class="our-services-head">OUR SERVICES</h6>
-                        <ul class="inside-list">
-                            <li>
-                                <ul class="inner-list">
-                                    <li>Manpower supply</li>
-                                    <li>Mechanical services</li>
-                                    <li>Blasting & Painting services</li>
-                                    <li>FRP coating services</li>
-                                    <li>Ducting services</li>
-                                    <li>Insulation services</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <ul class="inner-list">
-                                    <li>Boiler serving & retubing</li>
-                                    <li>Vessel & Tanks cleaning</li>
-                                    <li>Marine oil & gas integrated services</li>
-                                    <li>Hydrojetting services(5KPSI - 40KPSI)</li>
-                                    <li>Chemical cleaning(Pickling and Passivation)</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -151,19 +111,26 @@
     })
     $('#service-slider').owlCarousel({
         items: 1,
+        loop:true,
         margin:20,
-        loop: true,
-        autoplay:false,
-        smartSpeed: 2000,
-        autoplayTimeout: 6000,
-        slideTransition: 'linear',
-        autoplayHoverPause:false,
+        nav:true,
+        // responsive:{
+        //     0:{
+        //         items:1
+        //     },
+        //     600:{
+        //         items:3
+        //     },
+        //     1000:{
+        //         items:5
+        //     }
+        // }
     })
     $('#testimonial').owlCarousel({
         items: 1,
         loop: true,
         autoplay:false,
-        smartSpeed: 2000,
+        smartSpeed: 1000,
         autoplayTimeout: 6000,
         slideTransition: 'linear',
         autoplayHoverPause:false
@@ -172,7 +139,7 @@
         items: 3,
         loop: true,
         autoplay:false,
-        smartSpeed: 2000,
+        smartSpeed: 500,
         autoplayTimeout: 6000,
         slideTransition: 'linear',
         autoplayHoverPause:false

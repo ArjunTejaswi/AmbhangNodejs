@@ -112,7 +112,7 @@ blurb h2 {
 .main-nav{
     display: flex;
     justify-content: space-around;
-    height: 90px;
+    height: 70px;
 }
 .nav-items li {
     padding: 0 20px;
@@ -183,9 +183,10 @@ blurb h2 {
 
 .banner-content {
     position: absolute;
-    left: 0;
-    top: 50px;
+    left: 22%;
+    top: 200px;
 }
+
 .banner-content h1 {
     color: #ffffff;
     font-size: 57px;
@@ -334,8 +335,8 @@ ul.sub-sec, .gallery ul {
     text-decoration: none!important;
 }
 .main-nav img {
-    width: 10%;
-    height: 90px;
+    width: 8%;
+    height: 70px;
 }
 .home-banner.owl-theme .owl-dots .owl-dot{
     outline: none!important;
@@ -381,7 +382,7 @@ ul.sub-sec, .gallery ul {
 #service-slider button.owl-prev {
     position: absolute;
     top: 15%;
-    left: -41px;
+    left: -50px;
     outline: none!important;
 }
 #service-slider button.owl-next span:before {
@@ -399,12 +400,12 @@ ul.sub-sec, .gallery ul {
     position: absolute;
     top: 0;
     /* right: -30px; */
-    right: -41px;
+    right: -50px;
     outline: none!important;
 }
 .footer-section{
-    background-color : #0194cb;
-}
+    /*background-color : #0194cb;*/
+    background-image: linear-gradient(to right, #0194cb , #8eca66);}
 .footer-content h2 {
     text-align: center;
     font-size: 50px;
@@ -806,9 +807,10 @@ section#people-saying {
     padding-right: 25px;
     border-right: 1px solid #ffffff;
     display: inline-block;
-    line-height: 12px;
+    line-height: 20px;
     color: #ffffff;
     font-family: 'Spartan-Regular';
+    text-align: center;
 }
 .copyright-menu ul li:last-child {
     border: none;
@@ -1022,7 +1024,8 @@ ul.list-item {
     margin-left: 0!important;
 }
 section.jumbotron.about-us-sec {
-    padding: 70px 0 20px;
+    padding: 70px 0 30px;
+    background-image: linear-gradient(to bottom, #56ab2f, #a8e063);
 }
 
 .about-us h2 {
@@ -1142,4 +1145,16 @@ section.gallery-sec {
 }
 a.btn.btn-outline-success.btn-sm {
     border-color: #28a745;
+}
+section#gallery {
+    margin: 90px 0px 90px 0px;
+}
+ul.inner-list li a {
+    color: white;
+}
+ul.inner-list {
+    text-align: center;
+}
+.copyright-menu ul li a {
+    color: white;
 }
