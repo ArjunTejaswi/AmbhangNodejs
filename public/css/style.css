@@ -39,7 +39,7 @@ header {
     left: 0;
     right: 0;
     position: sticky;
-    overflow: auto;
+    overflow: visible;
     background-color: #ffffff;
     z-index: 999;
 }
@@ -166,7 +166,7 @@ blurb h2 {
 .nav-items li a:hover {
     border-bottom: 1px solid #004d72;
     text-decoration: none!important;
-    padding-top: 10px;
+    padding-top: 0;
     border-top: 1px solid #004d72;
 }
 .gallery li a, .sub-sec li a{
@@ -843,7 +843,8 @@ p.copyright {
     text-transform: uppercase;
 }
 li.course a:hover {
-    color: #7cc350;
+    color: #7cc350!important;
+    padding: 12px 0 10px;
 }
 .first-footer-content.footer-second li{
     margin-bottom: 30px;
@@ -1175,4 +1176,45 @@ ul.inner-list {
 section.terms {
     margin-bottom: 50px;
 }
-
+li.course {
+    position: relative;
+}
+ul.menu_ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+ul.dropdown-menu.multi-level1.open {
+    min-width: 220px!important;
+    display: block;
+}
+ul.dropdown-menu.multi-level1 {
+    display: none;
+}
+li.course a.nav-item.nav-link.hvr-underline-from-center.new-nav {
+    padding: 0!important;
+}
+.menu_ul a:hover {
+    border: 0!important;
+}
+ul.dropdown-menu.multi-level2 {
+    display: none;
+}
+ul.dropdown-menu.multi-level2.open {
+    min-width: 335px;
+    display: block;
+}
+ul.dropdown-menu.multi-level2.show {
+    min-width: 335px;
+    position: absolute;
+    top: 10px!important;
+    left: -120px!important;
+}
+ul.dropdown-menu.multi-level1.show {
+    min-width: 220px;
+    top: 10px!important;
+    left: -70px!important;
+}
+.jumbotron{
+    background-image: url("");
+}

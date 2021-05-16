@@ -23,22 +23,30 @@
                     </li>
                     <li class="course"><a href="/About-Us">ABOUT US</a>
                     </li>
-                    <li class="course"><a>SERVICES</a>
-                        <ul class="sub-sec">
-                            <li><a href="">MANPOWER SUPPLY</a></li>
-                            <li><a href="">MECHANICAL SERVICES</a></li>
-                            <li><a href="">BLASTING & PAINTING SERVICES</a></li>
-                            <li><a href="">DUCTING SERVICES</a></li>
-                            <li><a href="">FRP COATING SERVICES</a></li>
-                            <li><a href="">INSULATION SERVICES</a></li>
+                    <li class="course new-course"><a aria-expanded="true" class="nav-item nav-link hvr-underline-from-center new-nav" data-target="#" data-toggle="dropdown" href="" role="button">SERVICES</a>
+                        <ul class="dropdown-menu multi-level2" role="menu">
+                            <li class="inner-shop-right">
+                                <ul class="menu_ul">
+                                    <li><a href="">MANPOWER SUPPLY</a></li>
+                                    <li><a href="">MECHANICAL SERVICES</a></li>
+                                    <li><a href="">BLASTING & PAINTING SERVICES</a></li>
+                                    <li><a href="">DUCTING SERVICES</a></li>
+                                    <li><a href="">FRP COATING SERVICES</a></li>
+                                    <li><a href="">INSULATION SERVICES</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                     <li class="course"><a href="/Downloads">DOWNLOADS</a>
                     </li>
-                    <li class="course"><a>GALLERY</a>
-                        <ul class="sub-sec gallery-sec">
-                            <li><a href="/Gallery">PHOTO GALLERY</a></li>
-                            <li><a href="">VIDEO GALLERY</a></li>
+                    <li class="course new-course1"><a aria-expanded="true" class="nav-item nav-link hvr-underline-from-center new-nav" data-target="#" data-toggle="dropdown" href="" role="button">GALLERY</a>
+                        <ul class="dropdown-menu multi-level1" role="menu">
+                            <li class="inner-shop-right">
+                                <ul class="menu_ul">
+                                    <li><a href="/Gallery">PHOTO GALLERY</a></li>
+                                    <li><a href="">VIDEO GALLERY</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                     <li class="course"><a href="/Contact-Us">CONTACT US</a>
@@ -139,11 +147,21 @@
         items: 3,
         loop: true,
         autoplay:false,
-        smartSpeed: 500,
+        smartSpeed: 2000,
         autoplayTimeout: 6000,
         slideTransition: 'linear',
         autoplayHoverPause:false
     })
+    $(".new-course").on("click", function () {
+        if ($(".multi-level1").hasClass('open')) {
+            $(".multi-level2").toggleClass("open");
+        }
+    });
+    $(".new-course1").on("click", function () {
+        if ($(".multi-level2").hasClass('open')) {
+            $(".multi-level1").toggleClass("open");
+        }
+    });
 </script>
 </body>
 </html>
