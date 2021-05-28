@@ -113,6 +113,7 @@ blurb h2 {
     display: flex;
     justify-content: space-around;
     height: 70px;
+    padding: 0 30px;
 }
 .nav-items li {
     padding: 0 20px;
@@ -144,6 +145,7 @@ blurb h2 {
 .nav-items ul, .footer-link-right ul {
     display: inline-flex;
     margin: 0;
+    padding-left: 0;
 }
 .nav-items .nav-item-list li {
     padding: 0 20px;
@@ -335,8 +337,8 @@ ul.sub-sec, .gallery ul {
     text-decoration: none!important;
 }
 .main-nav img {
-    width: 8%;
-    height: 70px;
+    width: 100%;
+    height: 100%;
 }
 .home-banner.owl-theme .owl-dots .owl-dot{
     outline: none!important;
@@ -833,6 +835,7 @@ section#people-saying {
 .footer-content {
     padding: 50px 0 30px;
     display: flex;
+    flex-direction: column;
 }
 p.copyright {
     color: #004a6a;
@@ -1209,12 +1212,76 @@ ul.dropdown-menu.multi-level2.show {
     position: absolute;
     top: 10px!important;
     left: -120px!important;
+    border-top: 2px solid #018ec1;
+    border-radius: 0;
 }
 ul.dropdown-menu.multi-level1.show {
     min-width: 220px;
     top: 10px!important;
     left: -70px!important;
+    border-top: 2px solid #018ec1;
+    border-radius: 0;
 }
 .jumbotron{
     background-image: url("");
 }
+.filter-icon{
+    display: none;
+}
+.icon-bar:first-child {
+    margin-top: 0;
+}
+.icon-bar {
+    background: #004e73;
+    width: 25px;
+    height: 2px;
+    border-radius: 1px;
+    margin-top: 6px;
+    display: block;
+}
+.filter-overlay {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.3);
+    z-index: -1;
+    cursor: pointer;
+    transition: all .5s;
+    visibility: hidden;
+    opacity: 0;
+}
+.filter-open.filter-overlay:not(.find-overlay) {
+    transition: all .5s;
+    visibility: visible;
+    opacity: 1;
+    z-index: 3;
+}
+.second-nav{
+    display: none;
+}
+.sidenav-inner li.course a {
+    padding: 0 20px;
+    list-style: none;
+    font-size: 14px!important;
+    line-height: 44px!important;
+    color: #ffffff;
+    font-family: Spartan-Regular;
+    cursor: pointer;
+}
+.sidenav-inner li.course {
+    list-style: none;
+}
+.sidenav-inner ul.nav-item-list {
+    padding: 0;
+    text-align: center;
+}
+.logo-img{
+    width: 8%;
+    max-height: 75px;
+}
+

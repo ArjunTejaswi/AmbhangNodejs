@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ambang Service</title>
     <link href="/css/style.css" rel="stylesheet" type="text/css">
     <link href="/css/responsive.css" rel="stylesheet" type="text/css">
@@ -16,65 +17,91 @@
 <header>
     <div class="">
         <nav class="main-nav">
-            <img src="img/a.png">
+            <div class="logo-img">
+                <img src="img/a.png">
+            </div>
             <div class="nav-items">
                 <ul class="nav-item-list">
                     <li class="course"><a href="/Home">HOME</a>
                     </li>
                     <li class="course"><a href="/About-Us">ABOUT US</a>
                     </li>
-                    <li class="course new-course"><a aria-expanded="true" class="nav-item nav-link hvr-underline-from-center new-nav" data-target="#" data-toggle="dropdown" href="" role="button">SERVICES</a>
-                        <ul class="dropdown-menu multi-level2" role="menu">
-                            <li class="inner-shop-right">
-                                <ul class="menu_ul">
-                                    <li><a href="">MANPOWER SUPPLY</a></li>
-                                    <li><a href="">MECHANICAL SERVICES</a></li>
-                                    <li><a href="">BLASTING & PAINTING SERVICES</a></li>
-                                    <li><a href="">DUCTING SERVICES</a></li>
-                                    <li><a href="">FRP COATING SERVICES</a></li>
-                                    <li><a href="">INSULATION SERVICES</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+                    <li class="course new-course"><a href="">SERVICES</a>
+<!--                        <ul class="dropdown-menu multi-level2" role="menu">-->
+<!--                            <li class="inner-shop-right">-->
+<!--                                <ul class="menu_ul">-->
+<!--                                    <li><a href="">MANPOWER SUPPLY</a></li>-->
+<!--                                    <li><a href="">MECHANICAL SERVICES</a></li>-->
+<!--                                    <li><a href="">BLASTING & PAINTING SERVICES</a></li>-->
+<!--                                    <li><a href="">DUCTING SERVICES</a></li>-->
+<!--                                    <li><a href="">FRP COATING SERVICES</a></li>-->
+<!--                                    <li><a href="">INSULATION SERVICES</a></li>-->
+<!--                                </ul>-->
+<!--                            </li>-->
+<!--                        </ul>-->
                     </li>
                     <li class="course"><a href="/Downloads">DOWNLOADS</a>
                     </li>
-                    <li class="course new-course1"><a aria-expanded="true" class="nav-item nav-link hvr-underline-from-center new-nav" data-target="#" data-toggle="dropdown" href="" role="button">GALLERY</a>
-                        <ul class="dropdown-menu multi-level1" role="menu">
-                            <li class="inner-shop-right">
-                                <ul class="menu_ul">
-                                    <li><a href="/Gallery">PHOTO GALLERY</a></li>
-                                    <li><a href="">VIDEO GALLERY</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+                    <li class="course new-course1"><a href="">GALLERY</a>
+<!--                        <ul class="dropdown-menu multi-level1" role="menu">-->
+<!--                            <li class="inner-shop-right">-->
+<!--                                <ul class="menu_ul">-->
+<!--                                    <li><a href="/Gallery">PHOTO GALLERY</a></li>-->
+<!--                                    <li><a href="">VIDEO GALLERY</a></li>-->
+<!--                                </ul>-->
+<!--                            </li>-->
+<!--                        </ul>-->
                     </li>
                     <li class="course"><a href="/Contact-Us">CONTACT US</a>
                     </li>
                 </ul>
+                <a href="#" title="Filter" class="filter-icon" onclick="openNav()">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
             </div>
         </nav>
+        <div class="second-nav">
+            <div class="sidenav" id="mySidenav">
+                <div class="sidenav-inner">
+                    <ul class="nav-item-list">
+                        <li class="course"><a href="/Home">HOME</a>
+                        </li>
+                        <li class="course"><a href="/About-Us">ABOUT US</a>
+                        </li>
+                        <li class="course new-course"><a href="">SERVICES</a>
+                        </li>
+                        <li class="course"><a href="/Downloads">DOWNLOADS</a>
+                        </li>
+                        <li class="course new-course1"><a href="/Gallery">GALLERY</a>
+                        </li>
+                        <li class="course"><a href="/Contact-Us">CONTACT US</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 </header>
 <%- body %>
 <footer class="footer-section">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-lg-12 col-md-12">
                 <div class="footer-content">
-                    <div class="col-lg-6 col-md-6">
-                        <h6 class="our-services-head">OUR OTHER SERVICES</h6>
-                        <ul class="inner-list">
-                            <li><a href="#">Boiler serving & retubing</a></li>
-                            <li><a href="#">Vessel & Tanks cleaning</a></li>
-                            <li><a href="#">Marine oil & gas integrated services</a></li>
-                            <li><a href="#">Hydrojetting services(5KPSI - 40KPSI)</a></li>
-                            <li><a href="#">Chemical cleaning(Pickling and Passivation)</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-6 col-md-6 ml-3">
-                        <h6>FOLLOW US ON</h6>
-                        <ul class="social-icons">
+<!--                    <div class="col-lg-6 col-md-6 col-12 custom-list">-->
+<!--                        <h6 class="our-services-head">OUR OTHER SERVICES</h6>-->
+<!--                        <ul class="inner-list">-->
+<!--                            <li><a href="#">Boiler serving & retubing</a></li>-->
+<!--                            <li><a href="#">Vessel & Tanks cleaning</a></li>-->
+<!--                            <li><a href="#">Marine oil & gas integrated services</a></li>-->
+<!--                            <li><a href="#">Hydrojetting services(5KPSI - 40KPSI)</a></li>-->
+<!--                            <li><a href="#">Chemical cleaning(Pickling and Passivation)</a></li>-->
+<!--                        </ul>-->
+<!--                    </div>-->
+                    <h6>FOLLOW US ON</h6>
+                    <ul class="social-icons">
                             <li class="hvr-grow">
                                 <img src="img/facebook.svg">
                             </li>
@@ -88,26 +115,37 @@
                                 <img src="img/youtube.svg">
                             </li>
                         </ul>
-                        <div class="copyright-menu">
+                    <div class="copyright-menu">
                             <ul>
                                 <li><a href="/Home">Home</a></li>
                                 <li><a href="/About-Us">About Us</a></li>
-                                <li><a href="/PrivacyPolicy">Privacy Policy</a></li>
-                                <li><a href="/Terms">Terms And Conditions</a></li>
+                                <li><a href="">Services</a></li>
+                                <li><a href="">Downlods</a></li>
                             </ul>
                         </div>
-                        <p class="copyright">© 2021 Ambhang All rights reserved.</p>
-                    </div>
+                    <p class="copyright">© 2021 Ambhang All rights reserved.</p>
                 </div>
             </div>
         </div>
     </div>
 </footer>
+<div class="filter-overlay" onclick="closeNav()"></div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script type="text/javascript" src="js/owl.carousel.js"></script>
 <script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "calc(100% - 60px)";
+        $('html,.no-overlay-display').attr("style","overflow:hidden;height:100%;");
+        $('.filter-overlay').addClass("filter-open");
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        $('html,.no-overlay-display').attr("style","overflow:auto;height:auto;");
+        $('.filter-overlay').removeClass("filter-open");
+    }
     $('#banner-slider').owlCarousel({
         items: 1,
         loop: true,
@@ -122,17 +160,24 @@
         loop:true,
         margin:20,
         nav:true,
-        // responsive:{
-        //     0:{
-        //         items:1
-        //     },
-        //     600:{
-        //         items:3
-        //     },
-        //     1000:{
-        //         items:5
-        //     }
-        // }
+        responsive: {
+            0: {
+                items: 1,
+                margin: 10
+            },
+            575: {
+                items: 2,
+                margin: 15
+            },
+            767: {
+                items: 2,
+                margin: 25
+            },
+            1199: {
+                items: 3,
+                margin: 25
+            }
+        }
     })
     $('#testimonial').owlCarousel({
         items: 1,
@@ -150,7 +195,25 @@
         smartSpeed: 2000,
         autoplayTimeout: 6000,
         slideTransition: 'linear',
-        autoplayHoverPause:false
+        autoplayHoverPause:false,
+        responsive: {
+            0: {
+                items: 1,
+                margin: 10
+            },
+            575: {
+                items: 2,
+                margin: 15
+            },
+            767: {
+                items: 2,
+                margin: 25
+            },
+            1199: {
+                items: 3,
+                margin: 25
+            }
+        }
     })
     $(".new-course").on("click", function () {
         if ($(".multi-level1").hasClass('open')) {
@@ -162,6 +225,7 @@
             $(".multi-level1").toggleClass("open");
         }
     });
+
 </script>
 </body>
 </html>
